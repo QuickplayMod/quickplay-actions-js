@@ -43,44 +43,35 @@ export {ActionBus}
 export {Button}
 export {Screen}
 export {AliasedAction}
-
-export declare namespace Chat {
-    export {ChatComponent}
-    export {ChatFormatting}
-    export {ClickEvent}
-    export {HoverEvent}
-    export {Message}
-}
-
-export declare namespace Clientbound {
-    export {AuthBeginHandshakeAction}
-    export {AuthCompleteAction}
-    export {DisableModAction}
-    export {EnableModAction}
-    export {OpenGuiAction}
-    export {OpenScreenAction}
-    export {RefreshCacheAction}
-    export {ResetConfigAction}
-    export {SendChatCommandAction}
-    export {SendChatComponentAction}
-    export {SetAliasedActionAction}
-    export {SetButtonAction}
-    export {SetGlyphForUserAction}
-    export {SetKeybindsAction}
-    export {SetPremiumAboutAction}
-    export {SetScreenAction}
-    export {SetTranslationAction}
-    export {SystemOutAction}
-}
-
-export declare namespace Serverbound {
-    export {AuthEndHandshakeAction}
-    export {ButtonPressedAction}
-    export {ExceptionThrownAction}
-    export {HypixelLocationChangedAction}
-    export {InitializeClientAction}
-    export {LanguageChangedAction}
-    export {MigrateKeybindsAction}
-    export {ServerJoinedAction}
-    export {ServerLeftAction}
-}
+export {ChatComponent}
+export {ChatFormatting}
+export {ClickEvent}
+export {HoverEvent}
+export {Message}
+export {AuthBeginHandshakeAction}
+export {AuthCompleteAction}
+export {DisableModAction}
+export {EnableModAction}
+export {OpenGuiAction}
+export {OpenScreenAction}
+export {RefreshCacheAction}
+export {ResetConfigAction}
+export {SendChatCommandAction}
+export {SendChatComponentAction}
+export {SetAliasedActionAction}
+export {SetButtonAction}
+export {SetGlyphForUserAction}
+export {SetKeybindsAction}
+export {SetPremiumAboutAction}
+export {SetScreenAction}
+export {SetTranslationAction}
+export {SystemOutAction}
+export {AuthEndHandshakeAction}
+export {ButtonPressedAction}
+export {ExceptionThrownAction}
+export {HypixelLocationChangedAction}
+export {InitializeClientAction}
+export {LanguageChangedAction}
+export {MigrateKeybindsAction}
+export {ServerJoinedAction}
+export {ServerLeftAction}
