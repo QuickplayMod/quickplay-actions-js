@@ -27,7 +27,7 @@ class AuthCompleteAction extends Action {
 
         this.addPayload(Buffer.from(sessionToken))
         const buf = Buffer.alloc(4)
-        buf.writeUInt32BE(expiration.getTime(), 0)
+        buf.writeUInt32BE(expiration.getTime() / 1000, 0)
         this.addPayload(buf)
     }
 }
