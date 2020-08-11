@@ -15,8 +15,9 @@ class ActionBus {
      * Subscribe to listen for new Actions of a certain type to come in, at which point the passed function
      * will be called. The same Function can be subscribed multiple times.
      * @param action {typeof Action|number} The Action type to listen for. Can be an Action class, or an Action ID.
-     * @param fn {Function} The function to be called when the Action is received. Should be non-null. Should take
-     * one argument, which is the Action.
+     * @param fn {Function} The function to be called when the Action is received. Should be non-null. Should take at
+     * least one argument, which is the Action. Further arbitrary "rest" arguments can be passed to {@link publish},
+     * which can be received by this function.
      * @returns {boolean} True if the subscriber is added successfully, false otherwise.
      */
     public subscribe(action: typeof Action|number, fn: Function) : boolean {
@@ -35,8 +36,9 @@ class ActionBus {
      * Unsubscribe to stop listening for a type of Action on a specific Function. Will only unsubscribe the Function
      * once, so if the passed Function was subscribed multiple times, you will need to unsubscribe multiple times.
      * @param action {typeof Action|number} The Action type to listen for. Can be an Action class, or an Action ID.
-     * @param fn {Function} The function to be called when the Action is received. Should be non-null. Should take
-     * one argument, which is the Action.
+     * @param fn {Function} The function to be called when the Action is received. Should be non-null. Should take at
+     * least one argument, which is the Action. Further arbitrary "rest" arguments can be passed to {@link publish},
+     * which can be received by this function.
      * @returns {boolean} True if the subscriber is added successfully, false otherwise. Returns true if the
      * passed Function was never subscribed to the passed Action in the first place.
      */
@@ -61,13 +63,14 @@ class ActionBus {
     /**
      * Publish a new Action to this ActionBus, notifying all Functions subscribed to the type of Action published.
      * @param action {Action} The action to publish. Should be non-null.
+     * @param args {Object[]} Arbitrary arguments to pass to the subscriber
      */
-    public publish(action: Action) : void {
+    public publish(action: Action, ... args: Object[]) : void {
         if(action == null || this.subscribers[action.id] == null) {
             return
         }
         for(let i = 0; i < this.subscribers[action.id].length; i++) {
-            this.subscribers[action.id][i](action)
+            this.subscribers[action.id][i](action, ...args)
         }
     }
 }
