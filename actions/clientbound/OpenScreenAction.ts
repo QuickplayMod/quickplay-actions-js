@@ -10,6 +10,8 @@ import {Buffer} from 'buffer'
  */
 class OpenScreenAction extends Action {
 
+    static id = 11
+
     /**
 	 * Create a new OpenScreenAction.
 	 * @param screenName {string} The name of the screen that the client should open.

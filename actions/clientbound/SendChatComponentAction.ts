@@ -11,6 +11,8 @@ import {Buffer} from 'buffer'
  */
 class SendChatComponentAction extends Action {
 
+    static id = 3
+
     /**
 	 * Create a new SendChatComponentAction.
 	 * @param component {Message} Chat component message for the client to send

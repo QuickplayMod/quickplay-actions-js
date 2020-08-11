@@ -11,6 +11,8 @@ import {Buffer} from 'buffer'
  */
 class SetPremiumAboutAction extends Action {
 
+    static id = 16
+
     /**
 	 * Create a new SetPremiumAboutAction.
 	 * @param component {ChatComponent} Chat component to set the about text to.

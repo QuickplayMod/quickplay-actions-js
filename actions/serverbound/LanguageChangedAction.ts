@@ -2,7 +2,6 @@ import Action from '../Action'
 import {Buffer} from 'buffer'
 
 /**
- * SERVERBOUND - Server should not instantiate.
  * ID: 22
  * Received by the server when the client changes languages.
  *
@@ -10,6 +9,8 @@ import {Buffer} from 'buffer'
  * New language ID
  */
 class LanguageChangedAction extends Action {
+
+    static id = 22
 
     /**
 	 * Create a new LanguageChangedAction.

@@ -14,6 +14,8 @@ import {Buffer} from 'buffer'
  */
 class SetGlyphForUserAction extends Action {
 
+    static id = 14
+
     /**
      * Create a new SetGlyphForUserAction.
      * @param uuid {string} The UUID of the user for which this Glyph belongs.

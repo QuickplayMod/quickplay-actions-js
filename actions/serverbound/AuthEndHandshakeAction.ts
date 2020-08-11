@@ -2,7 +2,6 @@ import Action from '../Action'
 import {Buffer} from 'buffer'
 
 /**
- * SERVERBOUND - Server should not instantiate.
  * ID: 27
  * Received by the server when the client is done authenticating with
  * Mojang's servers, and Quickplay's backend should check for authenticity.
@@ -12,6 +11,7 @@ import {Buffer} from 'buffer'
  */
 class AuthEndHandshakeAction extends Action {
 
+    static id = 27
     /**
 	 * Create a new AuthEndHandshakeAction.
      * @param username {string} The current client's username

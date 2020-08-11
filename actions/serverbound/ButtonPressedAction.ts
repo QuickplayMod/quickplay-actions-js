@@ -2,7 +2,6 @@ import Action from '../Action'
 import {Buffer} from 'buffer'
 
 /**
- * SERVERBOUND - Server should not instantiate.
  * ID: 18
  * Received by the server when the client has pressed a Quickplay button, or a keybind which points to a button.
  *
@@ -10,6 +9,8 @@ import {Buffer} from 'buffer'
  * Button key
  */
 class ButtonPressedAction extends Action {
+
+    static id = 18
 
     /**
 	 * Create a new ButtonPressedAction.

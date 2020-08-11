@@ -17,6 +17,8 @@ import {Buffer} from 'buffer'
  */
 class SetScreenAction extends Action {
 
+    static id = 9
+
     /**
      * Create a new SetScreenAction.
      * @param screen {Screen} Screen to be saved to the client.

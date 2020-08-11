@@ -11,6 +11,8 @@ import {Buffer} from 'buffer'
  */
 class AuthCompleteAction extends Action {
 
+    static id = 28
+
     /**
      * Create a new AuthCompleteAction.
      * @param sessionToken {string} Session token to send

@@ -13,6 +13,8 @@ import {Buffer} from 'buffer'
  */
 class SetAliasedActionAction extends Action {
 
+    static id = 7
+
     /**
      * Create a new SetAliasedActionAction.
      * @param aliasedAction {AliasedAction} Aliased action to be saved to the client.

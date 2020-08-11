@@ -12,6 +12,8 @@ import {Buffer} from 'buffer'
  */
 class SetTranslationAction extends Action {
 
+    static id = 17
+
     /**
 	 * Create a new SetTranslationAction.
      * @param key {string} The key of the translation to set.

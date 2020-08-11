@@ -2,7 +2,6 @@ import Action from '../Action'
 import {Buffer} from 'buffer'
 
 /**
- * SERVERBOUND - Server should not instantiate.
  * ID: 19
  * Received by the server when an exception is reported by the client.
  *
@@ -26,6 +25,8 @@ import {Buffer} from 'buffer'
  * Current IP
  */
 class ExceptionThrownAction extends Action {
+
+    static id = 19
 
     /**
      * Create a new ExceptionThrownAction.

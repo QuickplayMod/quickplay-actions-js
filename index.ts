@@ -1,6 +1,7 @@
 import Action from "./actions/Action";
 import Resolver from "./actions/Resolver";
 import ActionBus from "./actions/ActionBus";
+import Subscriber from "./actions/Subscriber";
 import Button from "./Button";
 import Screen from "./Screen";
 import AliasedAction from "./AliasedAction";
@@ -40,6 +41,7 @@ import AuthEndHandshakeAction from "./actions/serverbound/AuthEndHandshakeAction
 export {Action}
 export {Resolver}
 export {ActionBus}
+export {Subscriber}
 export {Button}
 export {Screen}
 export {AliasedAction}

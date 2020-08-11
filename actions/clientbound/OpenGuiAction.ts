@@ -11,6 +11,8 @@ import {Buffer} from 'buffer'
  */
 class OpenGuiAction extends Action {
 
+    static id = 10
+
     /**
      * Create a new OpenGuiAction.
      * @param classpath {string} The path of the class to open as a GUI.

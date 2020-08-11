@@ -15,6 +15,8 @@ import {Buffer} from 'buffer'
  */
 class SetCurrentServerAction extends Action {
 
+    static id = 13
+
     /**
 	 * Create a new SetCurrentServerAction.
 	 * @param serverName {string} The name of the server that the client has connected to.

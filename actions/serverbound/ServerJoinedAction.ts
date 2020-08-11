@@ -2,7 +2,6 @@ import Action from '../Action'
 import {Buffer} from 'buffer'
 
 /**
- * SERVERBOUND - Server should not instantiate.
  * ID: 23
  * Received by the server when the client connects to a new Minecraft server.
  * Could be singleplayer, in which case the IP is "singleplayer".
@@ -12,6 +11,8 @@ import {Buffer} from 'buffer'
  * Metadata JSON about the server
  */
 class ServerJoinedAction extends Action {
+
+    static id = 23
 
     /**
      * Create a new ServerJoinedAction.

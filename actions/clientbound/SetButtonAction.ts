@@ -15,6 +15,8 @@ import {Buffer} from 'buffer'
  */
 class SetButtonAction extends Action {
 
+    static id = 8
+
     /**
      * Create a new SetButtonAction.
      * @param button {Button} Button to be saved to the client.

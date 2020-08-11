@@ -6,6 +6,8 @@ import Action from '../Action'
  */
 class ResetConfigAction extends Action {
 
+    static id = 5
+
     /**
 	 * Create a new ResetConfigAction.
 	 */

@@ -10,6 +10,8 @@ import {Buffer} from 'buffer'
  */
 class SendChatCommandAction extends Action {
 
+    static id = 6
+
     /**
 	 * Create a new SendChatCommandAction.
 	 * @param cmd {string} Command to send. Beginning slash will automatically be removed if provided,

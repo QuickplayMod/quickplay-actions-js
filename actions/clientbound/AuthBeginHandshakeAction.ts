@@ -10,6 +10,8 @@ import {Buffer} from 'buffer'
  */
 class AuthBeginHandshakeAction extends Action {
 
+    static id = 26
+
     /**
 	 * Create a new AuthBeginHandshakeAction.
 	 * @param handshakeToken {string} Handshake token to send

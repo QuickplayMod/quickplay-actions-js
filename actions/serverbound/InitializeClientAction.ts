@@ -2,7 +2,6 @@ import Action from '../Action'
 import {Buffer} from 'buffer'
 
 /**
- * SERVERBOUND - Server should not instantiate.
  * ID: 25
  * Received by the server when the client first initializes the socket. Intended to send client metadata.
  *
@@ -33,6 +32,8 @@ import {Buffer} from 'buffer'
  * Client version - This is the version of the user agent, e.g. for Forge, it'd be the Forge version.
  */
 class InitializeClientAction extends Action {
+
+    static id = 25
 
     /**
      * Create a new InitializeClientAction.

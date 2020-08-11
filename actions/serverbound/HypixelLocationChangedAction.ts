@@ -2,7 +2,6 @@ import Action from '../Action'
 import {Buffer} from 'buffer'
 
 /**
- * SERVERBOUND - Server should not instantiate.
  * ID: 20
  * Received by the server when the client changes locations on Hypixel.
  *
@@ -10,6 +9,8 @@ import {Buffer} from 'buffer'
  * Location JSON
  */
 class HypixelLocationChangedAction extends Action {
+
+    static id = 20
 
     /**
 	 * Create a new HypixelLocationChangedAction.

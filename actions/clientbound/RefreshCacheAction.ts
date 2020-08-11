@@ -8,6 +8,8 @@ import Action from '../Action'
  */
 class RefreshCacheAction extends Action {
 
+    static id = 12
+
     /**
 	 * Create a new RefreshCacheAction.
 	 */

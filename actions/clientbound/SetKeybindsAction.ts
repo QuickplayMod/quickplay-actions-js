@@ -12,6 +12,8 @@ import {Buffer} from 'buffer'
  */
 class SetKeybindsAction extends Action {
 
+    static id = 15
+
     /**
 	 * Create a new SetKeybindsAction.
 	 * @param keybinds {Record<string, ?>[]} New keybinds to serialize and send to the client.

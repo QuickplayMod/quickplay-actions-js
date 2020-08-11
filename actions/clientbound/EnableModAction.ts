@@ -6,6 +6,8 @@ import Action from '../Action'
  */
 class EnableModAction extends Action {
 
+    static id = 1
+
     /**
 	 * Create a new EnableModAction.
 	 */

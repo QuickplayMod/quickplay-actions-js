@@ -7,6 +7,8 @@ import {Buffer} from 'buffer'
  */
 class SystemOutAction extends Action {
 
+    static id = 4
+
     /**
 	 * Create a new SystemOutAction.
 	 * @param message {string} the message to send to the client's logs

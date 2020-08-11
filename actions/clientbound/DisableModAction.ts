@@ -10,6 +10,8 @@ import {Buffer} from 'buffer'
  */
 class DisableModAction extends Action {
 
+    static id = 2
+
     /**
 	 * Create a new DisableModAction.
      * @param reason {string} The reason the mod was disabled
