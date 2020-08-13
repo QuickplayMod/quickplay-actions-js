@@ -44,7 +44,8 @@ import AuthGoogleEndHandshakeAction from "./actions/serverbound/AuthGoogleEndHan
 import DeleteAliasedActionAction from "./actions/serverbound/DeleteAliasedActionAction";
 import DeleteButtonAction from "./actions/serverbound/DeleteButtonAction";
 import DeleteScreenAction from "./actions/serverbound/DeleteScreenAction";
-import ModificationRequestFailedAction from "./actions/clientbound/ModificationRequestFailedAction";
+import SetCurrentUserCountAction from "./actions/clientbound/SetCurrentUserCountAction";
+import SetUserCountHistoryAction from "./actions/clientbound/SetUserCountHistoryAction";
 
 export {Action}
 export {Resolver}
@@ -92,4 +93,6 @@ export {AuthGoogleEndHandshakeAction}
 export {DeleteAliasedActionAction}
 export {DeleteButtonAction}
 export {DeleteScreenAction}
-export {ModificationRequestFailedAction}
+export {SetCurrentUserCountAction}
+export {SetUserCountHistoryAction}
+

@@ -35,6 +35,8 @@ import DeleteAliasedActionAction from "./serverbound/DeleteAliasedActionAction";
 import AlterScreenAction from "./serverbound/AlterScreenAction";
 import AlterButtonAction from "./serverbound/AlterButtonAction";
 import AlterAliasedActionAction from "./serverbound/AlterAliasedActionAction";
+import SetCurrentUserCountAction from "./clientbound/SetCurrentUserCountAction";
+import SetUserCountHistoryAction from "./clientbound/SetUserCountHistoryAction";
 
 /**
  * Action resolver - Resolves Actions from their base Action type, and deserializes Actions from Buffers into
@@ -81,7 +83,9 @@ export default class Resolver {
         DeleteAliasedActionAction,
         AlterScreenAction,
         AlterButtonAction,
-        AlterAliasedActionAction
+        AlterAliasedActionAction,
+        SetCurrentUserCountAction,
+        SetUserCountHistoryAction
     ]
 
     /**
