@@ -5,26 +5,26 @@ import {Buffer} from 'buffer'
  * ID: 25
  * Received by the server when the client first initializes the socket. Intended to send client metadata.
  *
- * As an attempt to make porting Quickplay to other clients as easy as possible, only the first three payload items
+ * As an attempt to make porting Quickplay to other clients as easy as possible, only the first four payload items
  * are required. If you are a third party implementing Quickplay into your client, the other items may not be
  * relevant to your client, or your implementation or legal obligations may vary, rendering them difficult or
  * impossible to include. Additionally, they are not relevant to the Quickplay backend, but instead are used
  * to target a better user experience, debug issues, and gather user analytics.
  *
- * On the other hand, the player UUID, user agent, Quickplay version, and Minecraft language ARE required. The
+ * On the other hand, the client ID, user agent, Quickplay version, and Minecraft language ARE required. The
  * Quickplay backend uses these items to determine what actions to send to the user, and what those actions should
  * contain in their payload. If these items are not included, the socket connection will be disconnected. If they are
  * not accurate, the user could receive actions which they should not receive, which could result in incorrect
- * buttons/translations or, at worst, client crashes.
+ * buttons/translations or, at worst, client crashes/errors.
  *
- * If a player UUID is not relevant to your client (e.g. your client only supports offline mode), submit a UUID of
- * all 0's. If you are not sure what your Quickplay user agent should be, it does not matter as long as you are
+ * If a client ID is not relevant to your client (e.g. your client only supports anonymous mode), submit an empty
+ * string. If you are not sure what your Quickplay user agent should be, it does not matter as long as you are
  * confident that it is unique to your client. If you are not sure what your Quickplay version should be, use the
  * version of Quickplay from which you are porting. If a Minecraft language is not relevant to your client, use
- * the default language of your client or "en_US".
+ * the default language of your client or "en_us".
  *
  * Payload Order:
- * Player UUID
+ * Identifier - This is the unique identifier of this user, such as their UUID in Minecraft or their email in the browser.
  * User agent - This is the name of the client which the user is using.
  * Quickplay version
  * Minecraft language
@@ -38,16 +38,16 @@ class InitializeClientAction extends Action {
     /**
      * Create a new InitializeClientAction.
      */
-    constructor (uuid?: string, userAgent?: string, qpVersion?: string, lang?: string, mcVersion?: string, clientVersion?: string) {
+    constructor (id?: string, userAgent?: string, qpVersion?: string, lang?: string, mcVersion?: string, clientVersion?: string) {
         super()
         this.id = 25
 
         // Don't add payload if the first payload item wasn't provided
-        if(uuid == undefined) {
+        if(id == undefined) {
             return
         }
 
-        this.addPayload(Buffer.from(uuid))
+        this.addPayload(Buffer.from(id))
         this.addPayload(Buffer.from(userAgent))
         this.addPayload(Buffer.from(qpVersion))
         this.addPayload(Buffer.from(lang))

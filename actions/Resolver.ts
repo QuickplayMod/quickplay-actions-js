@@ -25,9 +25,16 @@ import ServerJoinedAction from './serverbound/ServerJoinedAction'
 import ServerLeftAction from './serverbound/ServerLeftAction'
 import InitializeClientAction from './serverbound/InitializeClientAction'
 import AuthBeginHandshakeAction from './clientbound/AuthBeginHandshakeAction'
-import AuthEndHandshakeAction from './serverbound/AuthEndHandshakeAction'
+import AuthMojangEndHandshakeAction from './serverbound/AuthMojangEndHandshakeAction'
 import AuthCompleteAction from './clientbound/AuthCompleteAction'
 import {Buffer} from 'buffer'
+import AuthGoogleEndHandshakeAction from "./serverbound/AuthGoogleEndHandshakeAction";
+import DeleteScreenAction from "./serverbound/DeleteScreenAction";
+import DeleteButtonAction from "./serverbound/DeleteButtonAction";
+import DeleteAliasedActionAction from "./serverbound/DeleteAliasedActionAction";
+import AlterScreenAction from "./serverbound/AlterScreenAction";
+import AlterButtonAction from "./serverbound/AlterButtonAction";
+import AlterAliasedActionAction from "./serverbound/AlterAliasedActionAction";
 
 /**
  * Action resolver - Resolves Actions from their base Action type, and deserializes Actions from Buffers into
@@ -66,8 +73,15 @@ export default class Resolver {
         ServerLeftAction,
         InitializeClientAction,
         AuthBeginHandshakeAction,
-        AuthEndHandshakeAction,
-        AuthCompleteAction
+        AuthMojangEndHandshakeAction,
+        AuthCompleteAction,
+        AuthGoogleEndHandshakeAction,
+        DeleteScreenAction,
+        DeleteButtonAction,
+        DeleteAliasedActionAction,
+        AlterScreenAction,
+        AlterButtonAction,
+        AlterAliasedActionAction
     ]
 
     /**

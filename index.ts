@@ -36,7 +36,15 @@ import InitializeClientAction from "./actions/serverbound/InitializeClientAction
 import HypixelLocationChangedAction from "./actions/serverbound/HypixelLocationChangedAction";
 import ExceptionThrownAction from "./actions/serverbound/ExceptionThrownAction";
 import ButtonPressedAction from "./actions/serverbound/ButtonPressedAction";
-import AuthEndHandshakeAction from "./actions/serverbound/AuthEndHandshakeAction";
+import AuthMojangEndHandshakeAction from "./actions/serverbound/AuthMojangEndHandshakeAction";
+import AlterAliasedActionAction from "./actions/serverbound/AlterAliasedActionAction";
+import AlterButtonAction from "./actions/serverbound/AlterButtonAction";
+import AlterScreenAction from "./actions/serverbound/AlterScreenAction";
+import AuthGoogleEndHandshakeAction from "./actions/serverbound/AuthGoogleEndHandshakeAction";
+import DeleteAliasedActionAction from "./actions/serverbound/DeleteAliasedActionAction";
+import DeleteButtonAction from "./actions/serverbound/DeleteButtonAction";
+import DeleteScreenAction from "./actions/serverbound/DeleteScreenAction";
+import ModificationRequestFailedAction from "./actions/clientbound/ModificationRequestFailedAction";
 
 export {Action}
 export {Resolver}
@@ -68,7 +76,7 @@ export {SetPremiumAboutAction}
 export {SetScreenAction}
 export {SetTranslationAction}
 export {SystemOutAction}
-export {AuthEndHandshakeAction}
+export {AuthMojangEndHandshakeAction}
 export {ButtonPressedAction}
 export {ExceptionThrownAction}
 export {HypixelLocationChangedAction}
@@ -77,3 +85,11 @@ export {LanguageChangedAction}
 export {MigrateKeybindsAction}
 export {ServerJoinedAction}
 export {ServerLeftAction}
+export {AlterAliasedActionAction}
+export {AlterButtonAction}
+export {AlterScreenAction}
+export {AuthGoogleEndHandshakeAction}
+export {DeleteAliasedActionAction}
+export {DeleteButtonAction}
+export {DeleteScreenAction}
+export {ModificationRequestFailedAction}

@@ -5,6 +5,8 @@ import {Buffer} from 'buffer'
 /**
  * ID: 3
  * Send a Quickplay chat message to the client's chat.
+ * Clients at the very least should be able to handle displaying a ChatComponent's text, but are not
+ * required to be able to handle displaying colors/formatting or handling click/hover events.
  *
  * Payload Order:
  * Chat component

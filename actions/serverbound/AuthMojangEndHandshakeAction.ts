@@ -9,11 +9,11 @@ import {Buffer} from 'buffer'
  * Payload Order:
  * Minecraft username
  */
-class AuthEndHandshakeAction extends Action {
+class AuthMojangEndHandshakeAction extends Action {
 
     static id = 27
     /**
-	 * Create a new AuthEndHandshakeAction.
+	 * Create a new AuthMojangEndHandshakeAction.
      * @param username {string} The current client's username
 	 */
     constructor (username?: string) {
@@ -28,4 +28,4 @@ class AuthEndHandshakeAction extends Action {
     }
 }
 
-export default AuthEndHandshakeAction
+export default AuthMojangEndHandshakeAction

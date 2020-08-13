@@ -4,6 +4,7 @@ import {Buffer} from 'buffer'
 /**
  * ID: 26
  * Begin authentication with the backend by sending a handshake token to the client.
+ * This handshake token is used in Mojang server authentication, but can be ignored in Google authentication.
  *
  * Payload Order:
  * Handshake token
