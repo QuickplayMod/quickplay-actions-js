@@ -47,6 +47,7 @@ import DeleteScreenAction from "./actions/serverbound/DeleteScreenAction";
 import SetCurrentUserCountAction from "./actions/clientbound/SetCurrentUserCountAction";
 import SetUserCountHistoryAction from "./actions/clientbound/SetUserCountHistoryAction";
 import AuthReestablishAuthedConnectionAction from "./actions/serverbound/AuthReestablishAuthedConnectionAction";
+import AuthFailedAction from "./actions/clientbound/AuthFailedAction";
 
 export {Action}
 export {Resolver}
@@ -97,4 +98,5 @@ export {DeleteScreenAction}
 export {SetCurrentUserCountAction}
 export {SetUserCountHistoryAction}
 export {AuthReestablishAuthedConnectionAction}
+export {AuthFailedAction}
 

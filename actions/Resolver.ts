@@ -38,6 +38,7 @@ import AlterAliasedActionAction from "./serverbound/AlterAliasedActionAction";
 import SetCurrentUserCountAction from "./clientbound/SetCurrentUserCountAction";
 import SetUserCountHistoryAction from "./clientbound/SetUserCountHistoryAction";
 import AuthReestablishAuthedConnectionAction from "./serverbound/AuthReestablishAuthedConnectionAction";
+import AuthFailedAction from "./clientbound/AuthFailedAction";
 
 /**
  * Action resolver - Resolves Actions from their base Action type, and deserializes Actions from Buffers into
@@ -87,7 +88,8 @@ export default class Resolver {
         AlterAliasedActionAction,
         SetCurrentUserCountAction,
         SetUserCountHistoryAction,
-        AuthReestablishAuthedConnectionAction
+        AuthReestablishAuthedConnectionAction,
+        AuthFailedAction
     ]
 
     /**
