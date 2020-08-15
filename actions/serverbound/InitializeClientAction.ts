@@ -1,6 +1,11 @@
 import Action from '../Action'
 import {Buffer} from 'buffer'
 
+const IdentifierTypes = Object.freeze({
+    GOOGLE: 'GOOGLE',
+    MOJANG: 'MOJANG'
+})
+
 /**
  * ID: 25
  * Received by the server when the client first initializes the socket. Intended to send client metadata.
@@ -20,11 +25,13 @@ import {Buffer} from 'buffer'
  * If a client ID is not relevant to your client (e.g. your client only supports anonymous mode), submit an empty
  * string. If you are not sure what your Quickplay user agent should be, it does not matter as long as you are
  * confident that it is unique to your client. If you are not sure what your Quickplay version should be, use the
- * version of Quickplay from which you are porting. If a Minecraft language is not relevant to your client, use
- * the default language of your client or "en_us".
+ * version of Quickplay from which you are porting. If this is not relevant (e.g. you are developing a web portal), you
+ * can tell the backend to ignore this by proving an empty value. If a Minecraft language is not relevant to your
+ * client, use the default language of your client or "en_us".
  *
  * Payload Order:
  * Identifier - This is the unique identifier of this user, such as their UUID in Minecraft or their email in the browser.
+ * Identifier type (GOOGLE or MOJANG)
  * User agent - This is the name of the client which the user is using.
  * Quickplay version
  * Minecraft language
@@ -37,8 +44,16 @@ class InitializeClientAction extends Action {
 
     /**
      * Create a new InitializeClientAction.
+     * @param id {string} Identifier for this client.
+     * @param idType {string} Type of ID used
+     * @param userAgent {string} User agent this client is using
+     * @param qpVersion {string} Version of Quickplay being used
+     * @param lang {string} Language used by the user
+     * @param mcVersion {string} Minecraft version being used, if applicable. Optional.
+     * @param clientVersion {string} Version of client being used, if applicable. Optional.
      */
-    constructor (id?: string, userAgent?: string, qpVersion?: string, lang?: string, mcVersion?: string, clientVersion?: string) {
+    constructor (id?: string, idType?: string, userAgent?: string, qpVersion?: string, lang?: string, mcVersion?: string,
+                 clientVersion?: string) {
         super()
         this.id = 25
 
@@ -65,3 +80,4 @@ class InitializeClientAction extends Action {
 }
 
 export default InitializeClientAction
+export {IdentifierTypes}
