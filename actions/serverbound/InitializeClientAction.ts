@@ -63,6 +63,7 @@ class InitializeClientAction extends Action {
         }
 
         this.addPayload(Buffer.from(id))
+        this.addPayload(Buffer.from(idType))
         this.addPayload(Buffer.from(userAgent))
         this.addPayload(Buffer.from(qpVersion))
         this.addPayload(Buffer.from(lang))
