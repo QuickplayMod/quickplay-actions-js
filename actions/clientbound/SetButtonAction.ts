@@ -12,6 +12,7 @@ import {Buffer} from 'buffer'
  * actions JSON array of aliased action keys
  * imageURL
  * translationKey
+ * adminOnly
  */
 class SetButtonAction extends Action {
 
@@ -35,6 +36,9 @@ class SetButtonAction extends Action {
         this.addPayload(Buffer.from(JSON.stringify(button.actions || [])))
         this.addPayload(Buffer.from(button.imageURL || ''))
         this.addPayload(Buffer.from(button.translationKey || ''))
+        const adminOnlyBuf = Buffer.alloc(1)
+        adminOnlyBuf.writeUInt8(button.adminOnly ? 1 : 0, 0)
+        this.addPayload(adminOnlyBuf)
     }
 }
 

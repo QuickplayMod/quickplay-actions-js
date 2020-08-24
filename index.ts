@@ -48,6 +48,9 @@ import SetCurrentUserCountAction from "./actions/clientbound/SetCurrentUserCount
 import SetUserCountHistoryAction from "./actions/clientbound/SetUserCountHistoryAction";
 import AuthReestablishAuthedConnectionAction from "./actions/serverbound/AuthReestablishAuthedConnectionAction";
 import AuthFailedAction from "./actions/clientbound/AuthFailedAction";
+import RemoveScreenAction from "./actions/clientbound/RemoveScreenAction";
+import RemoveButtonAction from "./actions/clientbound/RemoveButtonAction";
+import RemoveAliasedActionAction from "./actions/clientbound/RemoveAliasedActionAction";
 
 export {Action}
 export {Resolver}
@@ -99,4 +102,7 @@ export {SetCurrentUserCountAction}
 export {SetUserCountHistoryAction}
 export {AuthReestablishAuthedConnectionAction}
 export {AuthFailedAction}
+export {RemoveScreenAction}
+export {RemoveButtonAction}
+export {RemoveAliasedActionAction}
 

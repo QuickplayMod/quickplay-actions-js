@@ -14,6 +14,7 @@ import {Buffer} from 'buffer'
  * backButtonActions JSON array of aliased action keys which execute when the back button is pressed
  * translationKey
  * imageURL
+ * adminOnly
  */
 class SetScreenAction extends Action {
 
@@ -39,6 +40,9 @@ class SetScreenAction extends Action {
         this.addPayload(Buffer.from(JSON.stringify(screen.backButtonActions || [])))
         this.addPayload(Buffer.from(screen.translationKey || ''))
         this.addPayload(Buffer.from(screen.imageURL || ''))
+        const adminOnlyBuf = Buffer.alloc(1)
+        adminOnlyBuf.writeUInt8(screen.adminOnly ? 1 : 0, 0)
+        this.addPayload(adminOnlyBuf)
     }
 }
 

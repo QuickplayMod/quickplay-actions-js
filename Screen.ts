@@ -40,6 +40,10 @@ class Screen {
      * The URL to the image which can be displayed at the top of this Screen.
      */
     imageURL = ''
+    /**
+     * Whether or not this Screen can only be used/seen by Admins
+     */
+    adminOnly = false
 
     /**
      * Constructor

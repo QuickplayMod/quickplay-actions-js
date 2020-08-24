@@ -39,6 +39,9 @@ import SetCurrentUserCountAction from "./clientbound/SetCurrentUserCountAction";
 import SetUserCountHistoryAction from "./clientbound/SetUserCountHistoryAction";
 import AuthReestablishAuthedConnectionAction from "./serverbound/AuthReestablishAuthedConnectionAction";
 import AuthFailedAction from "./clientbound/AuthFailedAction";
+import RemoveScreenAction from "./clientbound/RemoveScreenAction";
+import RemoveButtonAction from "./clientbound/RemoveButtonAction";
+import RemoveAliasedActionAction from "./clientbound/RemoveAliasedActionAction";
 
 /**
  * Action resolver - Resolves Actions from their base Action type, and deserializes Actions from Buffers into
@@ -89,7 +92,10 @@ export default class Resolver {
         SetCurrentUserCountAction,
         SetUserCountHistoryAction,
         AuthReestablishAuthedConnectionAction,
-        AuthFailedAction
+        AuthFailedAction,
+        RemoveScreenAction,
+        RemoveButtonAction,
+        RemoveAliasedActionAction
     ]
 
     /**

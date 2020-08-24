@@ -19,6 +19,10 @@ class AliasedAction {
      * The Action which this AliasedAction is a wrapper for.
      */
     action: Action
+    /**
+     * Whether or not this Aliased Action can only be used/seen by Admins
+     */
+    adminOnly = false
 
     /**
      * Constructor

@@ -26,6 +26,11 @@ class Button {
      * The translation key for this Button's title.
      */
     translationKey = ''
+    /**
+     * Whether or not this Button can only be used/seen by Admins
+     */
+    adminOnly = false
+
 
     /**
      * Constructor
