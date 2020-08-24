@@ -42,6 +42,8 @@ import AuthFailedAction from "./clientbound/AuthFailedAction";
 import RemoveScreenAction from "./clientbound/RemoveScreenAction";
 import RemoveButtonAction from "./clientbound/RemoveButtonAction";
 import RemoveAliasedActionAction from "./clientbound/RemoveAliasedActionAction";
+import AlterTranslationAction from "./serverbound/AlterTranslationAction";
+import DeleteTranslationAction from "./serverbound/DeleteTranslationAction";
 
 /**
  * Action resolver - Resolves Actions from their base Action type, and deserializes Actions from Buffers into
@@ -95,7 +97,9 @@ export default class Resolver {
         AuthFailedAction,
         RemoveScreenAction,
         RemoveButtonAction,
-        RemoveAliasedActionAction
+        RemoveAliasedActionAction,
+        AlterTranslationAction,
+        DeleteTranslationAction
     ]
 
     /**

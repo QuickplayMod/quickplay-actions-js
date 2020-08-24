@@ -51,6 +51,8 @@ import AuthFailedAction from "./actions/clientbound/AuthFailedAction";
 import RemoveScreenAction from "./actions/clientbound/RemoveScreenAction";
 import RemoveButtonAction from "./actions/clientbound/RemoveButtonAction";
 import RemoveAliasedActionAction from "./actions/clientbound/RemoveAliasedActionAction";
+import AlterTranslationAction from "./actions/serverbound/AlterTranslationAction";
+import DeleteTranslationAction from "./actions/serverbound/DeleteTranslationAction";
 
 export {Action}
 export {Resolver}
@@ -105,4 +107,6 @@ export {AuthFailedAction}
 export {RemoveScreenAction}
 export {RemoveButtonAction}
 export {RemoveAliasedActionAction}
+export {AlterTranslationAction}
+export {DeleteTranslationAction}
 
