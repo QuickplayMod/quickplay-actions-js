@@ -44,6 +44,7 @@ import RemoveButtonAction from "./clientbound/RemoveButtonAction";
 import RemoveAliasedActionAction from "./clientbound/RemoveAliasedActionAction";
 import AlterTranslationAction from "./serverbound/AlterTranslationAction";
 import DeleteTranslationAction from "./serverbound/DeleteTranslationAction";
+import RemoveTranslationAction from "./clientbound/RemoveTranslationAction";
 
 /**
  * Action resolver - Resolves Actions from their base Action type, and deserializes Actions from Buffers into
@@ -99,7 +100,8 @@ export default class Resolver {
         RemoveButtonAction,
         RemoveAliasedActionAction,
         AlterTranslationAction,
-        DeleteTranslationAction
+        DeleteTranslationAction,
+        RemoveTranslationAction
     ]
 
     /**

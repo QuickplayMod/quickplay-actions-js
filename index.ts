@@ -53,6 +53,7 @@ import RemoveButtonAction from "./actions/clientbound/RemoveButtonAction";
 import RemoveAliasedActionAction from "./actions/clientbound/RemoveAliasedActionAction";
 import AlterTranslationAction from "./actions/serverbound/AlterTranslationAction";
 import DeleteTranslationAction from "./actions/serverbound/DeleteTranslationAction";
+import RemoveTranslationAction from "./actions/clientbound/RemoveTranslationAction";
 
 export {Action}
 export {Resolver}
@@ -109,4 +110,5 @@ export {RemoveButtonAction}
 export {RemoveAliasedActionAction}
 export {AlterTranslationAction}
 export {DeleteTranslationAction}
+export {RemoveTranslationAction}
 
