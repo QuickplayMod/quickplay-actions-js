@@ -110,7 +110,7 @@ export default class Resolver {
      * @returns the Action, or null if there is no Action for the specified ID.
      */
     static get (id: number) : typeof Action {
-        if(id < 0 || id >= this.actionMap.length) {
+        if(id < 0 || id >= Resolver.actionMap.length) {
             return null
         }
         return this.actionMap[id]
