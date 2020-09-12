@@ -1,3 +1,4 @@
+import {Buffer} from 'buffer'
 import Action from './Action'
 import EnableModAction from './clientbound/EnableModAction'
 import DisableModAction from './clientbound/DisableModAction'
@@ -27,7 +28,6 @@ import InitializeClientAction from './serverbound/InitializeClientAction'
 import AuthBeginHandshakeAction from './clientbound/AuthBeginHandshakeAction'
 import AuthMojangEndHandshakeAction from './serverbound/AuthMojangEndHandshakeAction'
 import AuthCompleteAction from './clientbound/AuthCompleteAction'
-import {Buffer} from 'buffer'
 import AuthGoogleEndHandshakeAction from "./serverbound/AuthGoogleEndHandshakeAction";
 import DeleteScreenAction from "./serverbound/DeleteScreenAction";
 import DeleteButtonAction from "./serverbound/DeleteButtonAction";
@@ -45,6 +45,10 @@ import RemoveAliasedActionAction from "./clientbound/RemoveAliasedActionAction";
 import AlterTranslationAction from "./serverbound/AlterTranslationAction";
 import DeleteTranslationAction from "./serverbound/DeleteTranslationAction";
 import RemoveTranslationAction from "./clientbound/RemoveTranslationAction";
+import AlterGlyphAction from "./serverbound/AlterGlyphAction";
+import GetDailyRewardAction from "./serverbound/GetDailyRewardAction";
+import SetDailyRewardDataAction from "./clientbound/SetDailyRewardDataAction";
+import ClaimDailyRewardAction from "./serverbound/ClaimDailyRewardAction";
 
 /**
  * Action resolver - Resolves Actions from their base Action type, and deserializes Actions from Buffers into
@@ -101,7 +105,11 @@ export default class Resolver {
         RemoveAliasedActionAction,
         AlterTranslationAction,
         DeleteTranslationAction,
-        RemoveTranslationAction
+        RemoveTranslationAction,
+        AlterGlyphAction,
+        GetDailyRewardAction,
+        SetDailyRewardDataAction,
+        ClaimDailyRewardAction
     ]
 
     /**

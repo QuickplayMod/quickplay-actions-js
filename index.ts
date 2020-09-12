@@ -54,6 +54,10 @@ import RemoveAliasedActionAction from "./actions/clientbound/RemoveAliasedAction
 import AlterTranslationAction from "./actions/serverbound/AlterTranslationAction";
 import DeleteTranslationAction from "./actions/serverbound/DeleteTranslationAction";
 import RemoveTranslationAction from "./actions/clientbound/RemoveTranslationAction";
+import AlterGlyphAction from "./actions/serverbound/AlterGlyphAction";
+import GetDailyRewardAction from "./actions/serverbound/GetDailyRewardAction";
+import SetDailyRewardDataAction from "./actions/clientbound/SetDailyRewardDataAction";
+import ClaimDailyRewardAction from "./actions/serverbound/ClaimDailyRewardAction";
 
 export {Action}
 export {Resolver}
@@ -111,4 +115,8 @@ export {RemoveAliasedActionAction}
 export {AlterTranslationAction}
 export {DeleteTranslationAction}
 export {RemoveTranslationAction}
+export {AlterGlyphAction}
+export {GetDailyRewardAction}
+export {SetDailyRewardDataAction}
+export {ClaimDailyRewardAction}
 
