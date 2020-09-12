@@ -1,6 +1,6 @@
 {
   "name": "@quickplaymod/quickplay-actions-js",
-  "version": "1.4.0",
+  "version": "1.4.1",
   "description": "Quickplay's central Action controller, written in TypeScript.",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
