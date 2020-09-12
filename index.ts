@@ -4,6 +4,7 @@ import ActionBus from "./actions/ActionBus";
 import Subscriber from "./actions/Subscriber";
 import Button from "./Button";
 import Screen from "./Screen";
+import Glyph from "./Glyph";
 import AliasedAction from "./AliasedAction";
 import ChatComponent from "./chat-components/ChatComponent";
 import ChatFormatting from "./chat-components/ChatFormatting";
@@ -66,6 +67,7 @@ export {Subscriber}
 export {Button}
 export {Screen}
 export {AliasedAction}
+export {Glyph}
 export {ChatComponent}
 export {ChatFormatting}
 export {ClickEvent}

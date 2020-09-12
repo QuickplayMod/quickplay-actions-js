@@ -21,3 +21,5 @@ class Glyph {
      */
     displayInGames = false;
 }
+
+export default Glyph
