@@ -14,7 +14,13 @@ import {Buffer} from 'buffer'
  * backButtonActions JSON array of aliased action keys which execute when the back button is pressed
  * translationKey
  * imageURL
+ * visible
  * adminOnly
+ * Hypixel locraw regex object in JSON
+ * Hypixel rank regex string
+ * Hypixel package rank regex string
+ * Hypixel build team only
+ * Hypixel build team admin only
  */
 class SetScreenAction extends Action {
 
@@ -40,9 +46,21 @@ class SetScreenAction extends Action {
         this.addPayload(Buffer.from(JSON.stringify(screen.backButtonActions || [])))
         this.addPayload(Buffer.from(screen.translationKey || ''))
         this.addPayload(Buffer.from(screen.imageURL || ''))
+        const visibleBuf = Buffer.alloc(1)
+        visibleBuf.writeUInt8(screen.visible ? 1 : 0, 0)
+        this.addPayload(visibleBuf)
         const adminOnlyBuf = Buffer.alloc(1)
         adminOnlyBuf.writeUInt8(screen.adminOnly ? 1 : 0, 0)
         this.addPayload(adminOnlyBuf)
+        this.addPayload(Buffer.from(JSON.stringify(screen.hypixelLocrawRegex || {})))
+        this.addPayload(Buffer.from(screen.hypixelRankRegex || ""))
+        this.addPayload(Buffer.from(screen.hypixelPackageRankRegex || ""))
+        const hypixelBuildTeamOnly = Buffer.alloc(1)
+        hypixelBuildTeamOnly.writeUInt8(screen.hypixelBuildTeamOnly ? 1 : 0, 0)
+        this.addPayload(hypixelBuildTeamOnly)
+        const hypixelBuildTeamAdminOnly = Buffer.alloc(1)
+        hypixelBuildTeamAdminOnly.writeUInt8(screen.hypixelBuildTeamAdminOnly ? 1 : 0, 0)
+        this.addPayload(hypixelBuildTeamAdminOnly)
     }
 }
 
