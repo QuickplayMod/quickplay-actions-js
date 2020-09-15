@@ -49,6 +49,7 @@ import AlterGlyphAction from "./serverbound/AlterGlyphAction";
 import GetDailyRewardAction from "./serverbound/GetDailyRewardAction";
 import SetDailyRewardDataAction from "./clientbound/SetDailyRewardDataAction";
 import ClaimDailyRewardAction from "./serverbound/ClaimDailyRewardAction";
+import PushEditHistoryEventAction from "./clientbound/PushEditHistoryEventAction";
 
 /**
  * Action resolver - Resolves Actions from their base Action type, and deserializes Actions from Buffers into
@@ -109,7 +110,8 @@ export default class Resolver {
         AlterGlyphAction,
         GetDailyRewardAction,
         SetDailyRewardDataAction,
-        ClaimDailyRewardAction
+        ClaimDailyRewardAction,
+        PushEditHistoryEventAction
     ]
 
     /**
