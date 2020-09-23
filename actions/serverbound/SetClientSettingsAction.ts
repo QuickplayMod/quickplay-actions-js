@@ -21,7 +21,7 @@ class SetClientSettingsAction extends Action {
      * Create a new ServerJoinedAction.
      * @param settingsData {Record<string, ?>} The client's settings object.
      */
-    constructor (settingsData: Record<string, unknown>) {
+    constructor (settingsData?: Record<string, unknown>) {
         super()
         this.id = 51
 
