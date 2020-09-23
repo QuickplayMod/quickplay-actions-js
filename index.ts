@@ -60,6 +60,7 @@ import GetDailyRewardAction from "./actions/serverbound/GetDailyRewardAction";
 import SetDailyRewardDataAction from "./actions/clientbound/SetDailyRewardDataAction";
 import ClaimDailyRewardAction from "./actions/serverbound/ClaimDailyRewardAction";
 import PushEditHistoryEventAction from "./actions/clientbound/PushEditHistoryEventAction";
+import SetClientSettingsAction from "./actions/serverbound/SetClientSettingsAction";
 
 export {Action}
 export {Resolver}
@@ -123,4 +124,5 @@ export {GetDailyRewardAction}
 export {SetDailyRewardDataAction}
 export {ClaimDailyRewardAction}
 export {PushEditHistoryEventAction}
+export {SetClientSettingsAction}
 
