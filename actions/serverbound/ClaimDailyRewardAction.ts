@@ -29,7 +29,9 @@ class ClaimDailyRewardAction extends Action {
             return
         }
 
-        this.addPayload(Buffer.from(option.toString()))
+        const optionBuf = Buffer.alloc(4)
+        optionBuf.writeUInt32BE(option, 0)
+        this.addPayload(optionBuf)
         this.addPayload(Buffer.from(securityToken))
         this.addPayload(Buffer.from(JSON.stringify(appData)))
     }
