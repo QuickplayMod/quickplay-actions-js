@@ -46,7 +46,7 @@ import DeleteAliasedActionAction from "./actions/serverbound/DeleteAliasedAction
 import DeleteButtonAction from "./actions/serverbound/DeleteButtonAction";
 import DeleteScreenAction from "./actions/serverbound/DeleteScreenAction";
 import SetCurrentUserCountAction from "./actions/clientbound/SetCurrentUserCountAction";
-import SetUserCountHistoryAction from "./actions/clientbound/SetUserCountHistoryAction";
+import AddUserCountHistoryAction from "./actions/clientbound/AddUserCountHistoryAction";
 import AuthReestablishAuthedConnectionAction from "./actions/serverbound/AuthReestablishAuthedConnectionAction";
 import AuthFailedAction from "./actions/clientbound/AuthFailedAction";
 import RemoveScreenAction from "./actions/clientbound/RemoveScreenAction";
@@ -110,7 +110,7 @@ export {DeleteAliasedActionAction}
 export {DeleteButtonAction}
 export {DeleteScreenAction}
 export {SetCurrentUserCountAction}
-export {SetUserCountHistoryAction}
+export {AddUserCountHistoryAction}
 export {AuthReestablishAuthedConnectionAction}
 export {AuthFailedAction}
 export {RemoveScreenAction}

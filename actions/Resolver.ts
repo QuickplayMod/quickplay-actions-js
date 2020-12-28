@@ -36,7 +36,7 @@ import AlterScreenAction from "./serverbound/AlterScreenAction";
 import AlterButtonAction from "./serverbound/AlterButtonAction";
 import AlterAliasedActionAction from "./serverbound/AlterAliasedActionAction";
 import SetCurrentUserCountAction from "./clientbound/SetCurrentUserCountAction";
-import SetUserCountHistoryAction from "./clientbound/SetUserCountHistoryAction";
+import AddUserCountHistoryAction from "./clientbound/AddUserCountHistoryAction";
 import AuthReestablishAuthedConnectionAction from "./serverbound/AuthReestablishAuthedConnectionAction";
 import AuthFailedAction from "./clientbound/AuthFailedAction";
 import RemoveScreenAction from "./clientbound/RemoveScreenAction";
@@ -99,7 +99,7 @@ export default class Resolver {
         AlterButtonAction,
         AlterAliasedActionAction,
         SetCurrentUserCountAction,
-        SetUserCountHistoryAction,
+        AddUserCountHistoryAction,
         AuthReestablishAuthedConnectionAction,
         AuthFailedAction,
         RemoveScreenAction,
