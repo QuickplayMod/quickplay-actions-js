@@ -19,6 +19,7 @@ import {Buffer} from 'buffer'
  * Hypixel package rank regex string
  * Hypixel build team only
  * Hypixel build team admin only
+ * Visible in party mode state
  */
 class SetButtonAction extends Action {
 
@@ -57,6 +58,9 @@ class SetButtonAction extends Action {
         const hypixelBuildTeamAdminOnly = Buffer.alloc(1)
         hypixelBuildTeamAdminOnly.writeUInt8(button.hypixelBuildTeamAdminOnly ? 1 : 0, 0)
         this.addPayload(hypixelBuildTeamAdminOnly)
+        const visibleInPartyMode = Buffer.alloc(1)
+        visibleInPartyMode.writeUInt8(button.visibleInPartyMode ? 1 : 0, 0)
+        this.addPayload(visibleInPartyMode)
     }
 }
 

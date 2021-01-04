@@ -64,6 +64,10 @@ class Button {
      * Whether or not this Button should only be visible/usable by Hypixel build team admins.
      */
     hypixelBuildTeamAdminOnly = false
+    /**
+     * Whether this Button is visible in party mode, i.e. it can be chosen in the party mode editor / spinner
+     */
+    visibleInPartyMode = true
 
 
     /**
