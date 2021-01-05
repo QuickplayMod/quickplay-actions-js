@@ -20,6 +20,7 @@ import {Buffer} from 'buffer'
  * Hypixel build team only
  * Hypixel build team admin only
  * Visible in party mode state
+ * Party mode scope translation key
  */
 class SetButtonAction extends Action {
 
@@ -61,6 +62,7 @@ class SetButtonAction extends Action {
         const visibleInPartyMode = Buffer.alloc(1)
         visibleInPartyMode.writeUInt8(button.visibleInPartyMode ? 1 : 0, 0)
         this.addPayload(visibleInPartyMode)
+        this.addPayload(Buffer.from(button.partyModeScopeTranslationKey || ''))
     }
 }
 

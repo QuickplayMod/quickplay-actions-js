@@ -27,6 +27,13 @@ class Button {
      */
     translationKey = ''
     /**
+     * The translation key for the scope of this Button to be displayed in party mode. E.g. while the main translation
+     * key for this button may translate to "Solo", this will translate to "Bedwars" to indicate what type of game the
+     * "Solo" applies to.
+     * This field is optional and if not present (null or length == 0), just the translation key will be used.
+     */
+    partyModeScopeTranslationKey = ''
+    /**
      * Whether or not this Button can be used/seen by anyone.
      */
     visible = false
