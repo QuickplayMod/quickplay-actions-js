@@ -39,7 +39,7 @@ class SetGlyphForUserAction extends Action {
         heightBuf.writeInt32BE(height, 0)
         this.addPayload(heightBuf)
         const offsetBuf = Buffer.alloc(8)
-        offsetBuf.writeFloatBE(height, 0)
+        offsetBuf.writeFloatBE(yOffset, 0)
         this.addPayload(offsetBuf)
         const displayInGamesBuf = Buffer.alloc(1)
         displayInGamesBuf.writeUInt8(displayInGames ? 1 : 0, 0)
