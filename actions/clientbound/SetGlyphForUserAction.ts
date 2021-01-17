@@ -43,6 +43,7 @@ class SetGlyphForUserAction extends Action {
         this.addPayload(offsetBuf)
         const displayInGamesBuf = Buffer.alloc(1)
         displayInGamesBuf.writeUInt8(displayInGames ? 1 : 0, 0)
+        this.addPayload(displayInGamesBuf)
     }
 }
 
