@@ -4,8 +4,8 @@ import {Buffer} from 'buffer'
 
 /**
  * ID: 46
- * Received by the server when the client requests to modify their Quickplay glyph.
- * Should be restricted to Premium users.
+ * Received by the server when the client requests to modify a Quickplay glyph. Admins should be able to modify
+ * any glyph, but non-admins should only be able to modify their own glyph, assuming they're Premium.
  *
  * Payload Order:
  * Glyph JSON

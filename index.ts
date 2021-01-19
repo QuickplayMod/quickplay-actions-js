@@ -61,6 +61,7 @@ import SetDailyRewardDataAction from "./actions/clientbound/SetDailyRewardDataAc
 import ClaimDailyRewardAction from "./actions/serverbound/ClaimDailyRewardAction";
 import PushEditHistoryEventAction from "./actions/clientbound/PushEditHistoryEventAction";
 import SetClientSettingsAction from "./actions/serverbound/SetClientSettingsAction";
+import DeleteGlyphAction from "./actions/serverbound/DeleteGlyphAction";
 
 export {Action}
 export {Resolver}
@@ -125,4 +126,4 @@ export {SetDailyRewardDataAction}
 export {ClaimDailyRewardAction}
 export {PushEditHistoryEventAction}
 export {SetClientSettingsAction}
-
+export {DeleteGlyphAction}
