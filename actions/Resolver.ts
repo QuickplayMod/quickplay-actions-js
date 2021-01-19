@@ -52,6 +52,7 @@ import ClaimDailyRewardAction from "./serverbound/ClaimDailyRewardAction";
 import PushEditHistoryEventAction from "./clientbound/PushEditHistoryEventAction";
 import SetClientSettingsAction from "./serverbound/SetClientSettingsAction";
 import DeleteGlyphAction from "./serverbound/DeleteGlyphAction";
+import RemoveGlyphAction from "./clientbound/RemoveGlyphAction";
 
 /**
  * Action resolver - Resolves Actions from their base Action type, and deserializes Actions from Buffers into
@@ -115,7 +116,8 @@ export default class Resolver {
         ClaimDailyRewardAction,
         PushEditHistoryEventAction,
         SetClientSettingsAction,
-        DeleteGlyphAction
+        DeleteGlyphAction,
+        RemoveGlyphAction
     ]
 
     /**
