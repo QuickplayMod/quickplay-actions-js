@@ -53,6 +53,7 @@ import PushEditHistoryEventAction from "./clientbound/PushEditHistoryEventAction
 import SetClientSettingsAction from "./serverbound/SetClientSettingsAction";
 import DeleteGlyphAction from "./serverbound/DeleteGlyphAction";
 import RemoveGlyphAction from "./clientbound/RemoveGlyphAction";
+import SetRegexAction from "./clientbound/SetRegexAction";
 
 /**
  * Action resolver - Resolves Actions from their base Action type, and deserializes Actions from Buffers into
@@ -117,7 +118,8 @@ export default class Resolver {
         PushEditHistoryEventAction,
         SetClientSettingsAction,
         DeleteGlyphAction,
-        RemoveGlyphAction
+        RemoveGlyphAction,
+        SetRegexAction
     ]
 
     /**

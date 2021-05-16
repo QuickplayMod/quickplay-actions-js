@@ -63,6 +63,7 @@ import PushEditHistoryEventAction from "./actions/clientbound/PushEditHistoryEve
 import SetClientSettingsAction from "./actions/serverbound/SetClientSettingsAction";
 import DeleteGlyphAction from "./actions/serverbound/DeleteGlyphAction";
 import RemoveGlyphAction from "./actions/clientbound/RemoveGlyphAction";
+import SetRegexAction from "./actions/clientbound/SetRegexAction";
 
 export {Action}
 export {Resolver}
@@ -129,3 +130,4 @@ export {PushEditHistoryEventAction}
 export {SetClientSettingsAction}
 export {DeleteGlyphAction}
 export {RemoveGlyphAction}
+export {SetRegexAction}
