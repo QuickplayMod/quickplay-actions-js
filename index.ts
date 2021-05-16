@@ -64,6 +64,9 @@ import SetClientSettingsAction from "./actions/serverbound/SetClientSettingsActi
 import DeleteGlyphAction from "./actions/serverbound/DeleteGlyphAction";
 import RemoveGlyphAction from "./actions/clientbound/RemoveGlyphAction";
 import SetRegexAction from "./actions/clientbound/SetRegexAction";
+import AlterRegexAction from "./actions/serverbound/AlterRegexAction";
+import DeleteRegexAction from "./actions/serverbound/DeleteRegexAction";
+import RemoveRegexAction from "./actions/clientbound/RemoveRegexAction";
 
 export {Action}
 export {Resolver}
@@ -131,3 +134,6 @@ export {SetClientSettingsAction}
 export {DeleteGlyphAction}
 export {RemoveGlyphAction}
 export {SetRegexAction}
+export {AlterRegexAction}
+export {DeleteRegexAction}
+export {RemoveRegexAction}

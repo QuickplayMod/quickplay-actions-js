@@ -54,6 +54,9 @@ import SetClientSettingsAction from "./serverbound/SetClientSettingsAction";
 import DeleteGlyphAction from "./serverbound/DeleteGlyphAction";
 import RemoveGlyphAction from "./clientbound/RemoveGlyphAction";
 import SetRegexAction from "./clientbound/SetRegexAction";
+import AlterRegexAction from "./serverbound/AlterRegexAction";
+import DeleteRegexAction from "./serverbound/DeleteRegexAction";
+import RemoveRegexAction from "./clientbound/RemoveRegexAction";
 
 /**
  * Action resolver - Resolves Actions from their base Action type, and deserializes Actions from Buffers into
@@ -119,7 +122,10 @@ export default class Resolver {
         SetClientSettingsAction,
         DeleteGlyphAction,
         RemoveGlyphAction,
-        SetRegexAction
+        SetRegexAction,
+        AlterRegexAction,
+        DeleteRegexAction,
+        RemoveRegexAction
     ]
 
     /**
