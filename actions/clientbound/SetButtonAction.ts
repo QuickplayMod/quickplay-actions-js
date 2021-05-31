@@ -63,6 +63,7 @@ class SetButtonAction extends Action {
         visibleInPartyMode.writeUInt8(button.visibleInPartyMode ? 1 : 0, 0)
         this.addPayload(visibleInPartyMode)
         this.addPayload(Buffer.from(button.partyModeScopeTranslationKey || ''))
+        this.addPayload(Buffer.from(JSON.stringify(button.settingsRegexes || {})))
     }
 }
 

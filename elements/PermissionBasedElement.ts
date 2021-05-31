@@ -45,6 +45,11 @@ class PermissionBasedElement extends Element {
      * Whether or not this Element should only be visible/usable by Hypixel build team admins.
      */
     hypixelBuildTeamAdminOnly = false
+    /**
+     * Map of Quickplay settings keys to RegularExpression keys. All regexes should pass in order for this Element
+     * to be available.
+     */
+    settingsRegexes = {}
 
     /**
      * Constructor

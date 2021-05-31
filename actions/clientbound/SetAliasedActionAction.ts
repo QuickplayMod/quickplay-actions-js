@@ -53,6 +53,7 @@ class SetAliasedActionAction extends Action {
         const hypixelBuildTeamAdminOnly = Buffer.alloc(1)
         hypixelBuildTeamAdminOnly.writeUInt8(aliasedAction.hypixelBuildTeamAdminOnly ? 1 : 0, 0)
         this.addPayload(hypixelBuildTeamAdminOnly)
+        this.addPayload(Buffer.from(JSON.stringify(aliasedAction.settingsRegexes || {})))
     }
 }
 

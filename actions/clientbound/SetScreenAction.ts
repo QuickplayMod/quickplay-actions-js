@@ -61,6 +61,7 @@ class SetScreenAction extends Action {
         const hypixelBuildTeamAdminOnly = Buffer.alloc(1)
         hypixelBuildTeamAdminOnly.writeUInt8(screen.hypixelBuildTeamAdminOnly ? 1 : 0, 0)
         this.addPayload(hypixelBuildTeamAdminOnly)
+        this.addPayload(Buffer.from(JSON.stringify(screen.settingsRegexes || {})))
     }
 }
 
