@@ -1,5 +1,6 @@
 import Action from '../Action'
 import {Buffer} from 'buffer'
+import Translation from "../../elements/Translation";
 
 /**
  * ID: 43
@@ -17,22 +18,20 @@ class AlterTranslationAction extends Action {
 
     /**
      * Create a new AlterTranslationAction.
-     * @param key {string} Key of the item the client is requesting to be altered.
-     * @param lang {string} Language of the item to be altered.
-     * @param value {string} Value to set the key/language pair to.
+     * @param translation {Translation} Translation to alter or create.
      */
-    constructor (key?: string, lang?: string, value?: string) {
+    constructor (translation?: Translation) {
         super()
         this.id = 43
 
         // Don't add payload if the first payload item wasn't provided
-        if(key == undefined) {
+        if(translation == undefined) {
             return
         }
 
-        this.addPayload(Buffer.from(key))
-        this.addPayload(Buffer.from(lang))
-        this.addPayload(Buffer.from(value))
+        this.addPayload(Buffer.from(translation.key))
+        this.addPayload(Buffer.from(translation.lang))
+        this.addPayload(Buffer.from(translation.value))
     }
 }
 

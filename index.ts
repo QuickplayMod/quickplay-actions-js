@@ -2,10 +2,15 @@ import Action from "./actions/Action";
 import Resolver from "./actions/Resolver";
 import ActionBus from "./actions/ActionBus";
 import Subscriber from "./actions/Subscriber";
-import Button from "./Button";
-import Screen from "./Screen";
+import Element from "./elements/Element";
+import PermissionBasedElement from "./elements/PermissionBasedElement";
+import ElementType from "./elements/ElementType";
+import Button from "./elements/Button";
+import Screen from "./elements/Screen";
 import Glyph from "./Glyph";
-import AliasedAction from "./AliasedAction";
+import AliasedAction from "./elements/AliasedAction";
+import Translation from "./elements/Translation";
+import RegularExpression from "./elements/RegularExpression";
 import ChatComponent from "./chat-components/ChatComponent";
 import ChatFormatting from "./chat-components/ChatFormatting";
 import ClickEvent from "./chat-components/ClickEvent";
@@ -72,10 +77,15 @@ export {Action}
 export {Resolver}
 export {ActionBus}
 export {Subscriber}
+export {Element}
+export {PermissionBasedElement}
+export {ElementType}
 export {Button}
 export {Screen}
 export {AliasedAction}
 export {Glyph}
+export {Translation}
+export {RegularExpression}
 export {ChatComponent}
 export {ChatFormatting}
 export {ClickEvent}
@@ -137,3 +147,4 @@ export {SetRegexAction}
 export {AlterRegexAction}
 export {DeleteRegexAction}
 export {RemoveRegexAction}
+

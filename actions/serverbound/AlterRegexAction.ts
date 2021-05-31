@@ -1,5 +1,6 @@
 import Action from '../Action'
 import {Buffer} from 'buffer'
+import RegularExpression from "../../elements/RegularExpression";
 
 /**
  * ID: 55
@@ -16,20 +17,20 @@ class AlterRegexAction extends Action {
 
     /**
      * Create a new AlterRegexAction.
-     * @param key {string} Key of the item the client is requesting to be altered.
-     * @param value {string} Value to associate with the provided key.
+     * @param regex {RegularExpression} The regular expression to alter.
+     *          Contains the key to update and the value to update it to.
      */
-    constructor (key?: string, value?: string) {
+    constructor (regex?: RegularExpression) {
         super()
         this.id = 55
 
         // Don't add payload if the first payload item wasn't provided
-        if(key == undefined) {
+        if(regex == undefined) {
             return
         }
 
-        this.addPayload(Buffer.from(key))
-        this.addPayload(Buffer.from(value))
+        this.addPayload(Buffer.from(regex.key))
+        this.addPayload(Buffer.from(regex.value))
     }
 }
 

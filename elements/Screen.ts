@@ -1,3 +1,6 @@
+import ElementType from "./ElementType";
+import PermissionBasedElement from "./PermissionBasedElement";
+
 const ScreenTypes = Object.freeze({
     IMAGES: 'IMAGES',
     BUTTONS: 'BUTTONS'
@@ -7,16 +10,7 @@ const ScreenTypes = Object.freeze({
  * A Screen in Quickplay is the highest level of user-facing objects. Screens are a set of Buttons which can be laid
  * out in a variety of ways. The client can display these Screens.
  */
-class Screen {
-
-    /**
-     * The key of this Screen. Unique identifier, should probably be CAPS_SNAKE_CASE.
-     */
-    key: string
-    /**
-     * Array of server identifiers that this Screen is available on.
-     */
-    availableOn: string[] = []
+class Screen extends PermissionBasedElement {
     /**
      * Array of Button keys which this Screen renders. Button objects are not used directly to reduce Action
      * size, remove redundant references to Buttons, and due to the async nature in how Buttons are
@@ -40,44 +34,6 @@ class Screen {
      * The URL to the image which can be displayed at the top of this Screen.
      */
     imageURL = ''
-    /**
-     * Whether or not this Screen can be used/seen by anyone.
-     */
-    visible = false
-    /**
-     * Whether or not this Screen can only be used/seen by Admins
-     */
-    adminOnly = false
-    /**
-     * Object containing regular expressions which are used to determine whether
-     * this Screen can be used/seen, given a player's location on Hypixel.
-     *
-     * Hypixel's /locraw command responds with a JSON object, containing different properties, which combined refer
-     * to a player's location on the server. The properties in the JSON response of the /locraw command must match
-     * all the properties of the same key in this object (assuming they exist and are strings) in order to be usable.
-     *
-     * Hypixel is the only server at the moment which supports advanced location detection like this.
-     */
-    hypixelLocrawRegex = {}
-    /**
-     * Regular expression that, assuming it is a non-empty string, must match the player's rank (not packageRank)
-     * provided by the Hypixel API in order for this Screen to be used/seen by the user.
-     */
-    hypixelRankRegex = ""
-    /**
-     * Regular expression that, assuming it is a non-empty string, must match the player's package rank
-     * provided by the Hypixel API in order for this Screen to be used/seen by the user.
-     * Package rank includes newPackageRank and monthlyPackageRank.
-     */
-    hypixelPackageRankRegex = ""
-    /**
-     * Whether or not this Screen should only be visible/usable by Hypixel build team members.
-     */
-    hypixelBuildTeamOnly = false
-    /**
-     * Whether or not this Screen should only be visible/usable by Hypixel build team admins.
-     */
-    hypixelBuildTeamAdminOnly = false
 
     /**
      * Constructor
@@ -85,7 +41,7 @@ class Screen {
      * @param screenType {string} Type of screen that this screen is.
      */
     constructor (key: string, screenType: string) {
-        this.key = key
+        super(key, ElementType.SCREEN)
         this.buttons = []
         this.screenType = screenType
         if(!ScreenTypes[this.screenType]) {

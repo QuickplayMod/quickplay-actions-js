@@ -1,5 +1,6 @@
 import Action from '../Action'
 import {Buffer} from 'buffer'
+import Translation from "../../elements/Translation";
 
 /**
  * ID: 44
@@ -16,20 +17,19 @@ class DeleteTranslationAction extends Action {
 
     /**
 	 * Create a new DeleteTranslationAction.
-     * @param key {string} Key of the item the client is requesting to be deleted.
-     * @param lang {string} Language of the item the client is requesting to be deleted.
+     * @param translation {Translation} The translation to remove. Only key and lang are used.
 	 */
-    constructor (key?: string, lang?: string) {
+    constructor (translation?: Translation) {
         super()
         this.id = 44
 
         // Don't add payload if the first payload item wasn't provided
-        if(key == undefined) {
+        if(translation == undefined) {
             return
         }
 
-        this.addPayload(Buffer.from(key))
-        this.addPayload(Buffer.from(lang))
+        this.addPayload(Buffer.from(translation.key))
+        this.addPayload(Buffer.from(translation.lang))
     }
 }
 

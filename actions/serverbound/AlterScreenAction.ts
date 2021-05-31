@@ -1,6 +1,6 @@
 import Action from '../Action'
 import {Buffer} from 'buffer'
-import Screen from "../../Screen";
+import Screen from "../../elements/Screen";
 
 /**
  * ID: 33

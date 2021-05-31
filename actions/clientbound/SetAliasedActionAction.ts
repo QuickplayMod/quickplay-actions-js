@@ -1,5 +1,5 @@
 import Action from '../Action'
-import AliasedAction from "../../AliasedAction"
+import AliasedAction from "../../elements/AliasedAction"
 import {Buffer} from 'buffer'
 
 /**

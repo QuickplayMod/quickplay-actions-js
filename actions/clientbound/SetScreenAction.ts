@@ -1,5 +1,5 @@
 import Action from '../Action'
-import Screen from "../../Screen"
+import Screen from "../../elements/Screen"
 import {Buffer} from 'buffer'
 
 /**

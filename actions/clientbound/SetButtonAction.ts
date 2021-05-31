@@ -1,5 +1,5 @@
 import Action from '../Action'
-import Button from "../../Button"
+import Button from "../../elements/Button"
 import {Buffer} from 'buffer'
 
 /**

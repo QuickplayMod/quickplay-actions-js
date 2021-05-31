@@ -1,6 +1,6 @@
 import Action from '../Action'
 import {Buffer} from 'buffer'
-import AliasedAction from "../../AliasedAction";
+import AliasedAction from "../../elements/AliasedAction";
 
 /**
  * ID: 35
