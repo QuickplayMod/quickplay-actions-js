@@ -28,7 +28,7 @@ import InitializeClientAction from './serverbound/InitializeClientAction'
 import AuthBeginHandshakeAction from './clientbound/AuthBeginHandshakeAction'
 import AuthMojangEndHandshakeAction from './serverbound/AuthMojangEndHandshakeAction'
 import AuthCompleteAction from './clientbound/AuthCompleteAction'
-import AuthGoogleEndHandshakeAction from "./serverbound/AuthGoogleEndHandshakeAction";
+import AuthDiscordEndHandshakeAction from "./serverbound/AuthDiscordEndHandshakeAction";
 import DeleteScreenAction from "./serverbound/DeleteScreenAction";
 import DeleteButtonAction from "./serverbound/DeleteButtonAction";
 import DeleteAliasedActionAction from "./serverbound/DeleteAliasedActionAction";
@@ -97,7 +97,7 @@ export default class Resolver {
         AuthBeginHandshakeAction,
         AuthMojangEndHandshakeAction,
         AuthCompleteAction,
-        AuthGoogleEndHandshakeAction,
+        AuthDiscordEndHandshakeAction,
         DeleteScreenAction,
         DeleteButtonAction,
         DeleteAliasedActionAction,

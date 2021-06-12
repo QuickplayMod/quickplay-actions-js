@@ -11,7 +11,6 @@ import {Buffer} from 'buffer'
  * Session expiration timestamp
  * Minecraft UUID
  * Discord ID, or empty string if non-existent
- * Google ID, or empty string if non-existent
  * isAdmin boolean
  * isPremium boolean
  * Premium expiration timestamp, or 0 if user has no premium.
@@ -30,7 +29,6 @@ class AuthCompleteAction extends Action {
      * @param sessionExpiration {Date} Datetime at which this session expires.
      * @param mcUuid {string} Minecraft UUID associated with this user's account.
      * @param discordId {string} Discord ID associated with this user's account.
-     * @param googleId {string} Google account ID associated with this user's account.
      * @param isAdmin {boolean} Whether this user has Admin permissions.
      * @param isPremium {boolean} Whether this user has a Premium subscription active.
      * @param premiumExpiration {Date} Datetime of when this user's Premium expires, or null if the user has no subscription.
@@ -39,7 +37,7 @@ class AuthCompleteAction extends Action {
      * @param isHypixelBuildTeam Flag signifying whether the user is a Hypixel build team member or not.
      * @param isHypixelBuildTeamAdmin Flag signifying whether the user is a Hypixel build team admin or not.
      */
-    constructor (sessionToken?: string, sessionExpiration?: Date, mcUuid?: string, discordId?: string, googleId?: string,
+    constructor (sessionToken?: string, sessionExpiration?: Date, mcUuid?: string, discordId?: string,
                  isAdmin?: boolean, isPremium?: boolean, premiumExpiration?: Date, hypixelRank?: string,
                  hypixelPackageRank?: string, isHypixelBuildTeam?: boolean, isHypixelBuildTeamAdmin?: boolean) {
         super()
@@ -54,7 +52,6 @@ class AuthCompleteAction extends Action {
         this.addPayload(sessionExpirationBuf)
         this.addPayload(Buffer.from(mcUuid || ''))
         this.addPayload(Buffer.from(discordId || ''))
-        this.addPayload(Buffer.from(googleId || ''))
         const isAdminBuf = Buffer.alloc(1)
         isAdminBuf.writeUInt8(isAdmin ? 1 : 0, 0)
         this.addPayload(isAdminBuf)

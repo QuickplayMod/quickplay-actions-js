@@ -46,7 +46,7 @@ import AuthMojangEndHandshakeAction from "./actions/serverbound/AuthMojangEndHan
 import AlterAliasedActionAction from "./actions/serverbound/AlterAliasedActionAction";
 import AlterButtonAction from "./actions/serverbound/AlterButtonAction";
 import AlterScreenAction from "./actions/serverbound/AlterScreenAction";
-import AuthGoogleEndHandshakeAction from "./actions/serverbound/AuthGoogleEndHandshakeAction";
+import AuthDiscordEndHandshakeAction from "./actions/serverbound/AuthDiscordEndHandshakeAction";
 import DeleteAliasedActionAction from "./actions/serverbound/DeleteAliasedActionAction";
 import DeleteButtonAction from "./actions/serverbound/DeleteButtonAction";
 import DeleteScreenAction from "./actions/serverbound/DeleteScreenAction";
@@ -121,7 +121,7 @@ export {ServerLeftAction}
 export {AlterAliasedActionAction}
 export {AlterButtonAction}
 export {AlterScreenAction}
-export {AuthGoogleEndHandshakeAction}
+export {AuthDiscordEndHandshakeAction}
 export {DeleteAliasedActionAction}
 export {DeleteButtonAction}
 export {DeleteScreenAction}

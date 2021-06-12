@@ -2,7 +2,7 @@ import Action from '../Action'
 import {Buffer} from 'buffer'
 
 const IdentifierTypes = Object.freeze({
-    GOOGLE: 'GOOGLE',
+    DISCORD: 'DISCORD',
     MOJANG: 'MOJANG',
     ANONYMOUS: 'ANONYMOUS'
 })
@@ -33,7 +33,7 @@ const IdentifierTypes = Object.freeze({
  * Payload Order:
  * Identifier - This is the unique identifier of this user, such as their UUID in Minecraft or their email in the browser.
  *      Should be an empty string if identifier type == ANONYMOUS
- * Identifier type (GOOGLE or MOJANG or ANONYMOUS)
+ * Identifier type (DISCORD or MOJANG or ANONYMOUS)
  * User agent - This is the name of the client which the user is using.
  * Quickplay version
  * Minecraft language
