@@ -23,6 +23,7 @@ import SetScreenAction from "./actions/clientbound/SetScreenAction";
 import SetPremiumAboutAction from "./actions/clientbound/SetPremiumAboutAction";
 import SetKeybindsAction from "./actions/clientbound/SetKeybindsAction";
 import SetGlyphForUserAction from "./actions/clientbound/SetGlyphForUserAction";
+import SetCurrentServerAction from "./actions/clientbound/SetCurrentServerAction";
 import SetAliasedActionAction from "./actions/clientbound/SetAliasedActionAction";
 import SystemOutAction from "./actions/clientbound/SystemOutAction";
 import SendChatComponentAction from "./actions/clientbound/SendChatComponentAction";
@@ -102,6 +103,7 @@ export {RefreshCacheAction}
 export {ResetConfigAction}
 export {SendChatCommandAction}
 export {SendChatComponentAction}
+export {SetCurrentServerAction}
 export {SetAliasedActionAction}
 export {SetButtonAction}
 export {SetGlyphForUserAction}

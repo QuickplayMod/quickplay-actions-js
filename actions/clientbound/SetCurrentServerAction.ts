@@ -12,6 +12,7 @@ import {Buffer} from 'buffer'
  *
  * Payload Order:
  * server name
+ * @deprecated Servers are now set client-side. Clients are not required to obey this Action.
  */
 class SetCurrentServerAction extends Action {
 
@@ -20,6 +21,7 @@ class SetCurrentServerAction extends Action {
     /**
 	 * Create a new SetCurrentServerAction.
 	 * @param serverName {string} The name of the server that the client has connected to.
+     * @deprecated Servers are now set client-side. Clients are not required to obey this Action.
 	 */
     constructor (serverName?: string) {
         super()
