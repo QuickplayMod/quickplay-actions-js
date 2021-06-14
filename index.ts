@@ -16,6 +16,7 @@ import ChatFormatting from "./chat-components/ChatFormatting";
 import ClickEvent from "./chat-components/ClickEvent";
 import HoverEvent from "./chat-components/HoverEvent";
 import Message from "./chat-components/Message";
+import {IdentifierTypes} from "./actions/serverbound/InitializeClientAction";
 import AuthBeginHandshakeAction from "./actions/clientbound/AuthBeginHandshakeAction";
 import SetButtonAction from "./actions/clientbound/SetButtonAction";
 import SetTranslationAction from "./actions/clientbound/SetTranslationAction";
@@ -73,7 +74,7 @@ import SetRegexAction from "./actions/clientbound/SetRegexAction";
 import AlterRegexAction from "./actions/serverbound/AlterRegexAction";
 import DeleteRegexAction from "./actions/serverbound/DeleteRegexAction";
 import RemoveRegexAction from "./actions/clientbound/RemoveRegexAction";
-import {IdentifierTypes} from "./actions/serverbound/InitializeClientAction";
+import LinkDiscordAction from "./actions/serverbound/LinkDiscordAction";
 
 export {Action}
 export {Resolver}
@@ -93,6 +94,7 @@ export {ChatFormatting}
 export {ClickEvent}
 export {HoverEvent}
 export {Message}
+export {IdentifierTypes}
 export {AuthBeginHandshakeAction}
 export {AuthCompleteAction}
 export {DisableModAction}
@@ -150,5 +152,5 @@ export {SetRegexAction}
 export {AlterRegexAction}
 export {DeleteRegexAction}
 export {RemoveRegexAction}
-export {IdentifierTypes}
+export {LinkDiscordAction}
 
