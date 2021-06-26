@@ -42,7 +42,8 @@ class UseOTPAction extends Action {
         }
 
         this.addPayload(Buffer.from(otp))
-        this.addPayload(Buffer.from(context))
+        this.addPayload(Buffer.from(context || ''))
+        this.addPayload(Buffer.from(uuid || ''))
     }
 }
 
