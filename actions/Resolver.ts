@@ -57,7 +57,7 @@ import SetRegexAction from "./clientbound/SetRegexAction";
 import AlterRegexAction from "./serverbound/AlterRegexAction";
 import DeleteRegexAction from "./serverbound/DeleteRegexAction";
 import RemoveRegexAction from "./clientbound/RemoveRegexAction";
-import LinkDiscordAction from "./serverbound/LinkDiscordAction";
+import UseOTPAction from "./serverbound/UseOTPAction";
 
 /**
  * Action resolver - Resolves Actions from their base Action type, and deserializes Actions from Buffers into
@@ -127,7 +127,7 @@ export default class Resolver {
         AlterRegexAction,
         DeleteRegexAction,
         RemoveRegexAction,
-        LinkDiscordAction
+        UseOTPAction
     ]
 
     /**

@@ -74,7 +74,7 @@ import SetRegexAction from "./actions/clientbound/SetRegexAction";
 import AlterRegexAction from "./actions/serverbound/AlterRegexAction";
 import DeleteRegexAction from "./actions/serverbound/DeleteRegexAction";
 import RemoveRegexAction from "./actions/clientbound/RemoveRegexAction";
-import LinkDiscordAction from "./actions/serverbound/LinkDiscordAction";
+import UseOTPAction from "./actions/serverbound/UseOTPAction";
 
 export {Action}
 export {Resolver}
@@ -152,5 +152,5 @@ export {SetRegexAction}
 export {AlterRegexAction}
 export {DeleteRegexAction}
 export {RemoveRegexAction}
-export {LinkDiscordAction}
+export {UseOTPAction}
 
